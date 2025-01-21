@@ -3,37 +3,52 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-      <footer className="bg-black-dark w-[190vh] overflow-hidden mt-32 lg:w-[208vh] sm:w-[190vh] md:w-[200vh] text-white py-16">
+     <footer class="bg-gray-800 text-white py-10">
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6">
+    {/* <!-- About Section --> */}
+    <div>
+      <h3 class="text-xl font-semibold mb-4">About Us</h3>
+      <p class="text-sm text-gray-400">We are a leading ecommerce platform providing top-notch products and customer service.</p>
+    </div>
 
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center mt-12">
-          <div className="mb-4 md:mb-0">
-            <a href="#" className="text-2xl font-bold text-black-newdark">Ecommerce</a>
-          </div>
+    {/* <!-- Quick Links Section --> */}
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+      <ul>
+        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Men's</a></li>
+        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Women's</a></li>
+        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Gadgets</a></li>
+      </ul>
+    </div>
 
-          <div className="flex space-x-8">
-            <a href="#" className="hover:text-grey-thin">About Us</a>
-            <a href="#" className="hover:text-grey-thin">Services</a>
-            <a href="#" className="hover:text-grey-thin">Contact</a>
-            <a href="#" className="hover:text-grey-thin">Privacy Policy</a>
-          </div>
+    {/* <!-- Contact Section --> */}
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+      <ul>
+        <li class="mb-2"><span class="text-gray-400">Email: support@example.com</span></li>
+        <li class="mb-2"><span class="text-gray-400">Phone: +123 456 7890</span></li>
+        <li class="mb-2"><span class="text-gray-400">Address: 1234 Street Name, City, Country</span></li>
+      </ul>
+    </div>
 
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" aria-label="Facebook" className="hover:text-blue-400">
-              {/* Facebook SVG */}
-            </a>
-            <a href="#" aria-label="Twitter" className="hover:text-blue-400">
-              {/* Twitter SVG */}
-            </a>
-            <a href="#" aria-label="Instagram" className="hover:text-blue-400">
-              {/* Instagram SVG */}
-            </a>
-          </div>
-        </div>
+    {/* <!-- Newsletter Section --> */}
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+      <p class="text-sm text-gray-400 mb-4">Subscribe to our newsletter for the latest updates.</p>
+      <form class="flex">
+        <input type="email" class="rounded-l-lg p-2 outline-none w-full text-gray-700" placeholder="Your email" />
+        <button type="submit" class="bg-red-500 text-white rounded-r-lg px-4 hover:bg-red-600">Subscribe</button>
+      </form>
+    </div>
+  </div>
 
-        <div className="mt-8 text-center text-gray-400 text-sm">
-          &copy; 2025 BrandName. All rights reserved.
-        </div>
-      </footer>
+  {/* <!-- Footer Bottom Section --> */}
+  <div class="bg-gray-900 text-gray-400 text-center py-4 mt-8">
+    <p>&copy; 2025 Ecommerce Platform. All Rights Reserved.</p>
+  </div>
+</footer>
+
     </div>
   )
 }

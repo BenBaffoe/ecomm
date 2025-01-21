@@ -78,10 +78,10 @@ function Signup() {
   return (
     <div>
       <div className='sm:block md:flex lg:flex block bg-white w-full'>
-      <div className='w-0 sm:w-0 md:w-5/12 lg:w-5/12'>
+      <div className='w-0   lg:w-6/12'>
           <img src={one} className='w-0 sm:w-0 sm:h-0 lg:w-3/4 lg:h-screen md:w-3/4 md:h-screen '/>
         </div>
-        <div className='w-12/12 sm:w-full md:w-5/12 lg:w-5/12  mt-2 sm:mt-2 md:mt-2 lg:mt-2  ml-0 sm:ml-24 md:ml-28 lg:ml-28'>
+        <div className='w-full md:w-full lg:w-6/12  mt-2 sm:mt-2 md:mt-2 lg:mt-2  ml-0  md:ml-28 lg:ml-6'>
           <form  onSubmit={handleLoading} className='w-full sm:w-full md:w-full lg:w-full text-black-dark  flex justify-center items-center sm:block md:block lg:block text-sm scrollbar-hide overflow-y-auto '>
           <div className='w-full sm:w-full md:w-full lg:w-full p-4 sm:p-0 md:p-0 lg:p-0'>
              <p className='text-xs font-normal text-left mb-4 text-black-dark'>Ecommerce</p>

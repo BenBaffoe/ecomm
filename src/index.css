@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .white-glass{
-  background: rgba(247, 245, 241, 0.05);
+  /* background: rgba(247, 245, 241, 0.05); */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(0.2px);
@@ -22,4 +22,11 @@
 .scrollbar-hide {
   -ms-overflow-style: none; 
 }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
  

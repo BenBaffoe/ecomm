@@ -15,27 +15,29 @@ function App() {
   const showFooter = location.pathname !== '/signin' && location.pathname !== '/signup';
 
   return (
-    <div className="w-[160vh] bg-yellow-400 sm:bg-green-500 md:bg-orange-500 lg:bg-blue-500 xl:bg-black-darker sm:w-[186vh] md:w-[190vh] lg:w-[208vh] xl:w-[214vh]">
+    <div className="w-screen  sm:w-screen md:w-screen lg:w-screen xl:w-screen">
       {showNavbar && (
-        <div>
+        <div className="navbar  w-full h-12 bg-white fixed top-0 z-20">
           <Navbar />
         </div>
        
        
       )}
 
-
-      <Routes>
+<div className="w-full overflow-hidden">
+  <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/hero' element={<Hero/>}/>
       </Routes>
      
-{/* 
+</div>
+      
+
       {showFooter && (
        <Footer /> 
-      )} */}
+      )}
       
     </div>
   );
