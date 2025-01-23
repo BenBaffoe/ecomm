@@ -5,7 +5,7 @@ import three from '../image_folder/woman-1846127_1280.jpg';
 import four from '../image_folder/blue_.jpg';
 import five from '../image_folder/red.jpg';
 import data from './data/NewArrivals';
-import { ChevronDown, ChevronUp, Heart } from 'react-feather';
+import { ChevronDown, ChevronUp, Heart, ShoppingCart } from 'react-feather';
 
 function Hero() {
   const [index, setIndex] = useState(0);
@@ -96,8 +96,10 @@ function Hero() {
 
     
 
-    <div className='w-full block md:flex md:items-center mt-24 mb-24 md:mt-44 md:mb-40 justify-center h-fit md:space-x-16 space-x-0 '>
-   
+
+      <p className='text-center text-black-dark md:text-2xl text-lg pt-20'>Our New Collection</p>
+    <div className='w-full block md:flex md:items-center mt-24 mb-24 md:mt-24 md:mb-40 justify-center h-fit md:space-x-16 space-x-0 '>
+
     <div className='w-full h-[30vh] shadow-lg relative   md:w-5/12 md:h-[60vh]'>
       <img src={five} className='w-full rounded-none md:rounded-md h-full'/>
       <div className='md:absolute md:bottom-28  md:right-10 absolute bottom-16 right-5'>
@@ -151,7 +153,7 @@ function Hero() {
         <div className='pt-10 md:pt-2 md:text-center text-left pl-0 text-sm md:text-xs'>{item.descript}</div>
         <div className='w-full  flex items-center justify-center'>
           <div>
-          <button className='bg-black-dark text-white md:text-sm mt-2 rounded-2xl md:w-44 md:h-10 md:rounded-3xl w-44 h-10'>{item.butt_ons}</button>
+          <button className='bg-black-dark flex space-x-5 md:flex md:space-x-8 pt-1.5 md:pt-2.5 pl-6 md:pl-8 text-white md:text-sm mt-2 rounded-2xl md:w-44 md:h-10 md:rounded-3xl w-44 h-10'> <div>{item.butt_ons}</div><div><ShoppingCart size={16} className='mr-2 mt-1 '/></div></button>
           </div>
         </div>
         
