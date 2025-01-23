@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <div className='w-full overflow-hidden rounded-md shadow-md bg-white'>
-      <nav className='flex py-4 pr-6  shadow-sm pl-2 md:pl-8 md:pr-4 justify-between md:flex md:space-x-96 md:justify-normal '>
+      <nav className='flex py-4 pr-6 md:pb-6 pb-4  shadow-sm pl-2 md:pl-8 md:pr-4 justify-between md:flex md:space-x-96 md:justify-normal '>
       <div>
         <p className='md:pt-3 pt-0 md:pl-6 pl-0'>Ecommerce</p>
       </div>
