@@ -11,6 +11,7 @@ import seven from '../image_folder/bag-removebg-preview.png'
 import eight from '../image_folder/model_1.jpg'
 import nine from '../image_folder/GUEST_23c32b6d-d90a-4287-acb4-1d1623e306a1.webp'
 import { Link } from "react-router-dom";
+
 // import Footer from "./components/Footer";
 
 
@@ -39,18 +40,16 @@ export default function Home() {
   }, []);
   
 
-
-
   return (
   <div className="w-full md:mb-28 mb-6 ">
     <div className="flex items-center justify-center">
-      <div className="w-12/12 relative  ml-0  mt-10 md:mt-16 lg:mt-16 mr-0 sm:w-10/12 md:w-10/12 lg:w-11/12 ">
-       <img src={one} className="w-full h-[60vh] sm:h-[80vh] md:h-[100vh] lg:h-[100vh] rounded-2xl" />
+<div className="w-12/12 relative  ml-0  mt-4 md:mt-16 lg:mt-16 mr-0 sm:w-10/12 md:w-10/12 lg:w-11/12 ">
+       <img src={one} className="w-full h-[50vh] md:h-[50vh] lg:h-[100vh] rounded-2xl" />
     </div>
     </div>
     
     
-    <div className="absolute z-10 top-60 left-6  md:absolute md:top-96 md:left-28 lg:absolute lg:top-96 lg:left-28">
+    <div className="absolute z-10 top-40 left-6  md:absolute md:top-96 md:left-28 lg:absolute lg:top-96 lg:left-28">
       <div className="text-blue-400 font-bold text-lg md:text-4xl lg:text-4xl border-b border-b-gray-50 pb-4">Contemporary  <span className="text-white">and urban energy</span></div>
       <div className="flex space-x-16 pt-6">
       <div>

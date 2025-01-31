@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, ShoppingCart, Menu, X } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -13,7 +14,7 @@ function Navbar() {
      
      <div className='flex  space-x-4 md:hidden'>
       <button>
-        <ShoppingCart size={16} />
+      <Link to={'/shop'}><ShoppingCart size={16} /></Link>
       </button>
 
       <button className='z-20' onClick={()=>setShow(!show)}>
@@ -24,28 +25,29 @@ function Navbar() {
 
 
      <div className='md:flex text-sm space-x-12 hidden'>
-      <p className='pt-3'>Home</p>
-      <p  className='pt-3'>Men's</p>
-      <p  className='pt-3'>Women's</p>
-      <p  className='pt-3'>Gadgets</p>
+     <Link to={'/hero'}><div className='pt-3 cursor-pointer'>Home</div></Link>
+      <Link to={'/men'}><div className='pt-3 cursor-pointer'>Men's</div></Link>
+      <Link to={'/women'}><div className='pt-3 cursor-pointer'>Women's</div></Link>
+      <Link to={'/gadgets'}> <div className='pt-3 cursor-pointer'>Gadgets</div></Link>
       <div className='relative'>
             <input
               placeholder='Search here'
               className='bg-gray-100 text-sm font-semibold outline-none rounded-full px-4 py-2 w-full'
             />
             <Search size={18} className='absolute top-2 right-3' />
-      </div>
-      <p><ShoppingCart size={16} className='mt-2' /></p>
+     </div>
+     <Link to={'/shop'}><p><ShoppingCart size={16} className='mt-2' /></p></Link> 
      </div>
 
       </nav>
      
     {show && 
     <div className='w-full absolute top-0 pt-16 text-lg h-screen bg-grey-thin text-left pl-10'>
-      <p className='py-2'>Home</p>
-      <p className='py-2'>Men's</p>
-      <p className='py-2'>Women's</p>
-      <p className='py-2'>Gadgets</p>
+      <Link to={'/hero'}><div className='py-2 cursor-pointer'>Home</div></Link>
+      <Link to={'/men'}><div className='py-2 cursor-pointer'>Men's</div></Link>
+      <Link to={'/women'}><div className='py-2 cursor-pointer'>Women's</div></Link>
+      <Link to={'/gadgets'}> <div className='py-2 cursor-pointer'>Gadgets</div></Link>
+     
     </div>
 
     }
