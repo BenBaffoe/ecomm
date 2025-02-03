@@ -30,15 +30,15 @@ function App() {
   // const [handleCart , setHandle]
 
 
-  function handleShop(value , item){
-   setShop(((prev) => ({ ...prev, [value]: true })));
+  function handleShop(item){
+   setShop(((prev) => ({ ...prev, [item.id]: true })));
 
-  //  const exists = selectedItems.some((existingItem) => existingItem.id === item.id);
+   const exists = selectedItems.some((existingItem) => existingItem.id === item.id);
     
-    // if (!exists) {
+    if (!exists) {
       // Add item if it doesn't exist in the cart
       setSelectedItems((prev) => [...prev, item]);
-    // }
+    }
   }
 
   function handleView(item){
@@ -47,16 +47,13 @@ function App() {
 
   return (
     <div className="w-screen  sm:w-screen md:w-screen lg:w-screen xl:w-screen">
-      {showNavbar && (
-        <div className="navbar  w-full h-12 bg-white fixed top-0 z-20">
-          <Navbar />
-        </div>
-       
-       
-      )}
-
 <div className="w-full overflow-hidden">
 <DataContext.Provider value={{handleShop , selectedItems, handlesView, handleView  , shop , setSelectedItems , handleIndex, setHandleIndex}}>
+{showNavbar && (
+        <div className="navbar  w-full h-12 bg-white fixed top-0 z-20">
+          <Navbar />
+        </div>   
+      )}
   <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<SignUp />} />

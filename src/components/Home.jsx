@@ -17,27 +17,27 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          } else {
-            entry.target.classList.remove('animate-in');
-          }
-        });
-      },
-      { threshold: 0.5, rootMargin: "0px 0px -20% 0px" } // Adjust threshold and rootMargin as needed
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.add('animate-in');
+  //         } else {
+  //           entry.target.classList.remove('animate-in');
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5, rootMargin: "0px 0px -20% 0px" } // Adjust threshold and rootMargin as needed
+  //   );
   
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach((el) => observer.observe(el));
+  //   const elements = document.querySelectorAll('.animate-on-scroll');
+  //   elements.forEach((el) => observer.observe(el));
   
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
+  //   return () => {
+  //     elements.forEach((el) => observer.unobserve(el));
+  //   };
+  // }, []);
   
 
   return (
@@ -115,7 +115,7 @@ export default function Home() {
 
        {/* Kicks */}
        <div className="relative">
-       <div className="w-40 md:h-64 md:w-52 mb-12 md:mb-2 relative  animate-on-scroll  slide-in-from-left-28 duration-1000 rounded-3xl shadow-lg h-52">
+       <div className="w-40 md:h-64 md:w-52 mb-12 md:mb-2 relative  duration-1000 rounded-3xl shadow-lg h-52">
        <div className="absolute inset-0 bg-black-dark opacity-20 rounded-3xl z-10"></div>
        <img src={three} className="w-full animate-in zoom-in-100 duration-1000 rounded-3xl h-full relative z-0" />
     
@@ -136,7 +136,7 @@ export default function Home() {
  
  {/* laptop  */}
 
-<div  className="md:w-[28rem] ml-1 md:ml-7 w-96 relative  animate-on-scroll  slide-in-left-bottom-28 duration-500 h-64 shadow-md rounded-xl bg-pink-500">
+<div  className="md:w-[28rem] ml-1 md:ml-7 w-96 relative  8 duration-500 h-64 shadow-md rounded-xl bg-pink-500">
        <img src={six} className="w-2/4 md:w-2/4 ml-40 pt-8  md:mt-0 md:ml-28 h-3/4  rounded-3xl md:h-full"/>
        <div className="md:absolute md:top-24 md:left-4 absolute top-14 left-4">
           <p className="text-xs ">
@@ -156,7 +156,7 @@ export default function Home() {
 {/* Men's wear */}
 <div className="md:flex md:items-center mt-4 md:justify-center block items-center">
       <div className=" md:flex block space-x-8">
-         <div className="md:w-[28rem] relative  animate-on-scroll  slide-in-from-left-28 duration-1000 mr-0 ml-1 md:mr-6 w-96  shadow-md rounded-xl bg-green-800  h-64">
+         <div className="md:w-[28rem] relative  duration-1000 mr-0 ml-1 md:mr-6 w-96  shadow-md rounded-xl bg-green-800  h-64">
         <img className="w-2/4 md:w-2/4 ml-40 pt-8 md:ml-28  h-full" src={five} />
         <div className="absolute top-24 left-4">
           <p className="text-xs ">
@@ -172,7 +172,7 @@ export default function Home() {
       </div>
       {/* woman and bags */}
       <div className="flex space-x-8 mt-12 items-center justify-center md:mt-0 ">
-      <div className="md:w-52 w-40 h-52 relative   animate-on-scroll  slide-in-from-right-28 duration-600 rounded-2xl shadow-md md:h-64">
+      <div className="md:w-52 w-40 h-52 relative    duration-600 rounded-2xl shadow-md md:h-64">
         <img className="w-full  rounded-2xl h-full" src={two} />
         <div className="absolute top-9 left-4 md:absolute md:top-24 md:left-4">
           <p className="text-xs ">
@@ -210,13 +210,13 @@ export default function Home() {
 
       <div className="w-full flex justify-center mt-20 items-center">
         <div className="md:bg-grey-thin bg-white md:w-11/12 w-full h-[80vh]  rounded-2xl  ">
-        <div className="md:pt-14 pt-4 animate-on-scroll  slide-in-from-left-32 duration-700 space-x-32">
+        <div className="md:pt-14 pt-4 duration-700 space-x-32">
       <p className="md:text-4xl text-xl  mb-16 md:mb-0 text-center  font-bold">Experience the Best Shopping Journey</p>
         </div>
 
 
         <div className="w-full block text-center md:text-left md:flex md:space-x-16 md:mt-40 mt-6">
-    <div className="md:ml-8 ml-0 animate-on-scroll slide-in-from-bottom-20 duration-500 w-full md:w-1/3">
+    <div className="md:ml-8 ml-0  duration-500 w-full md:w-1/3">
       <div className="flex items-start pl-6 md:pl-0 justify-start mb-4 ">
         <div className="md:w-20 md:h-14 w-8 h-8">
            <ShoppingBag color="#60a5fa" className="w-full h-full" />

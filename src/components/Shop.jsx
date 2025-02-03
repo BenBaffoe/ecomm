@@ -43,7 +43,7 @@ function Shop() {
 
                 {/* Total Price */}
                 <div className="w-2/12 text-center font-semibold text-gray-700">
-                  ${item.price}
+                  {item.price}
                 </div>
 
                 {/* Remove Button */}

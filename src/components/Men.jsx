@@ -1,17 +1,22 @@
-import React from 'react';
+import React , { useContext } from 'react';
 import one from '../image_folder/balancing-1868051_1920.jpg'
-import data from './data/NewArrivals';
+import data_men from './data/mens';
+import { DataContext } from './Contexts/DataContext';
 import { ChevronDown, ChevronUp, Heart, ShoppingCart , Eye, Tag } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 function Men() {
+ 
+  const { handleView , shop , handleShop } = useContext(DataContext);
+
   return (
     <div>
         <div className='flex w-full overflow-hidden items-center justify-center'>
             <div className='w-full relative h-[50vh] md:h-[50vh] mb-4 rounded-2xl mt-10 md:mt-16  lg:h-[100vh]'>
                 <img src={one} className='w-full lg:w-11/12 md:ml-10 ml-0 h-full rounded-2xl'/>
                 <div className='absolute top-0 lg:w-11/12 md:ml-10 ml-0 bg-black-dark opacity-30 rounded-2xl w-full  h-[50vh] md:h-[50vh] z-20 lg:h-[100vh] '>
-                  <div className='text-red-thin z-50 text-left text-lg  left-2 absolute top-9 md:absolute md:top-32 md:text-2xl font-extrabold md:left-16'>BUY<span className='text-blue-600 font-extrabold'>HIVE</span>
-                  <div className='text-left font-bold text-3xl z-50 w-full  left-0 absolute top-14 md:absolute md:top-16 md:font-extrabold md:text-5xl md:left-1'>Check Our Men's Collection</div>
+                  <div className='text-red-thin z-50 text-left text-lg  left-2 absolute top-4 md:absolute md:top-10 md:text-6xl font-extrabold md:left-16'>
+                  <div className='text-left font-bold text-3xl z-50 w-6/12  left-0 absolute top-10 md:absolute md:top-6 md:font-extrabold md:text-7xl md:left-1'>Check Our Men's Collection</div>
                   </div>
                 </div>
             </div>
@@ -19,14 +24,26 @@ function Men() {
 
         <div className='w-full'>
           <p className='text-center font-light text-xl md:text-5xl pb-6 md:mb-10 mt-6 '>Categories</p>
-           <div className='flex items-center justify-center space-x-6 p-2'>
-            <div className='w-16 h-6 cursor-pointer md:w-20 shadow-md md:h-9 text-center rounded-full md:pt-2 bg-grey-light text-sm'>
+           <div className='flex items-center justify-center scrollbar-hide overflow-x-scroll space-x-6 p-2'>
+            <div className='w-16 h-6 cursor-pointer md:w-20 shadow-md md:h-9 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Shirts
             </div>
-            <div className='md:w-20 md:h-9 cursor-pointer shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-grey-light text-sm'>
+            <div className='md:w-20 md:h-9 cursor-pointer shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Glasses
             </div>
-            <div className='md:w-20 md:h-9 cursor-pointer  shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-grey-light text-sm'>
+            <div className='md:w-20 md:h-9 cursor-pointer shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+              Watch
+            </div>
+            <div className='md:w-20 md:h-9 cursor-pointer shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+              Shoes
+            </div>
+            <div className='md:w-20 md:h-9 cursor-pointer shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+               Jackets
+            </div>
+            <div className='md:w-20 md:h-9 cursor-pointer shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+              Shorts
+            </div>
+            <div className='md:w-20 md:h-9 cursor-pointer  shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
                Trousers
             </div>
            </div>
@@ -34,21 +51,21 @@ function Men() {
 
 
 
-    <div className='mt-32 mb-10 flex items-center justify-center'>
-    <div className="md:w-7/12 w-8/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6  md:grid md:grid-cols-3 md:gap-6">
-    {data.map((item, index) => (
-      <div className="rounded-xl shadow-md bg-white p-1 h-[53vh] md:h-[58vh]" key={index}>
+    <div className='mt-32 mb-10 drop-shadow-2xl flex items-center justify-center'>
+    <div className="md:w-8/12 w-8/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6  md:grid md:grid-cols-3 md:gap-14">
+    {data_men.map((item, index) => (
+      <div className="rounded-xl bg-white p-1 h-[64vh] sm:h-[76vh]" key={index}>
         <div className='relative'>
-        <img src={item.image} className="w-full h-3/4 object-cover rounded-md" alt={`Image ${index}`} />
+        <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
         <div className='absolute top-2 right-2'>
-          <Heart color='black' size={16} />
+          <Heart color='red' size={16} />
         </div>
-        <div className='absolute top-2 left-2'>
+        {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
-        </div>
-        <div className='absolute bottom-0 right-3'>
-          <Eye size={18}  />
-        </div>
+        </div> */}
+        <button onClick={()=>handleView(item)} className='absolute bottom-0 right-3'>
+          <Link to={'/view'}><Eye size={18}/></Link>
+        </button>
         </div>
         <div className='md:flex md:items-start md:justify-start  flex justify-start items-start md:pl-3 pl-2  pt-6 md:pt-2'>
         <div className='pb-4 md:pb-1'>
@@ -56,7 +73,7 @@ function Men() {
         <div  className='pt-0 md:pt-1 md:text-left text-blue-400 text-left md:pl-2 pl-2 text-sm md:text-xs'>{item.price}</div>
         <div className='w-full  flex items-center justify-center md:block'>
           <div>
-          <button className='bg-black-dark flex space-x-5 md:flex md:space-x-24 pt-1.5 md:pt-3 pl-6 md:pl-4 text-white md:text-xs mt-2 rounded-2xl md:w-52 md:h-10 md:rounded-3xl w-44 h-10'> <div>{item.butt_ons}</div><div><ShoppingCart size={16}  className='mr-2 pb-0.5 text-blue-400 mt-1 '/></div></button>
+          <button key={index}  disabled={shop[item.id]} onClick={()=>handleShop(item)} className={` ${shop[item.id] ? 'bg-gray-300' : 'bg-black-dark'} flex space-x-10 md:flex md:space-x-24 pt-1.5 md:pt-3 pl-4 md:pl-4 text-white md:text-xs mt-2 rounded-2xl md:w-52 md:h-10 md:rounded-3xl w-44 h-9`}> <div className='font-bold'>{ shop[item.id] ? "Added" : item.butt_ons }</div><div className={`${shop[item.id] ? "hidden": "block"}`}><ShoppingCart size={16}  className='mr-2 pb-0.5 text-blue-400 mt-1.5 md:mt-0.5 '/></div></button>
           </div>
         </div>
         

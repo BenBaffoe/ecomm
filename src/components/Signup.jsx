@@ -113,7 +113,7 @@ function Signup() {
               Password
             </label>
             </div>
-            <input name='password' placeholder='password here'  className='w-11/12   pl-3 sm:w-5/5 lg:w-4/5 md:w-4/5  sm:h-16 md:h-12 lg:h-12  bg-gray-100 outline-none h-12 rounded-lg mt-2 mb-4'/>
+            <input name='password' placeholder='password here'  type='password' className='w-11/12   pl-3 sm:w-5/5 lg:w-4/5 md:w-4/5  sm:h-16 md:h-12 lg:h-12  bg-gray-100 outline-none h-12 rounded-lg mt-2 mb-4'/>
 
            {/* confirmpassword */}
             <div>
