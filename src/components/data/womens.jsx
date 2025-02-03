@@ -12,7 +12,7 @@ const data_women = [
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
-   
+    
       
        },
 
