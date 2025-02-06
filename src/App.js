@@ -9,7 +9,7 @@ import Hero from "./components/Hero";
 import Men from "./components/Men";
 import Women from "./components/Women";
 import Gagdets from "./components/Gagdets";
-import data  from "./components/data/NewArrivals";
+// import data  from "./components/data/NewArrivals";
 import { DataContext } from "./components/Contexts/DataContext";
 import Shop from "./components/Shop";
 import View from "./components/View";

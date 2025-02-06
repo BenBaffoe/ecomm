@@ -43,8 +43,8 @@ export default function Home() {
   return (
   <div className="w-full md:mb-28 mb-6 ">
     <div className="flex items-center justify-center">
-<div className="w-12/12 relative  ml-0  mt-4 md:mt-16 lg:mt-16 mr-0 sm:w-10/12 md:w-10/12 lg:w-11/12 ">
-       <img src={one} className="w-full h-[50vh] md:h-[50vh] lg:h-[100vh] rounded-2xl" />
+<div className="w-12/12 relative  ml-0  mt-4 md:mt-16 lg:mt-16 mr-0 sm:w-10/12 md:w-11/12 ">
+       <img src={one} className="w-full h-[50vh] md:h-[100vh]  rounded-2xl" />
     </div>
     </div>
     
@@ -136,7 +136,7 @@ export default function Home() {
  
  {/* laptop  */}
 
-<div  className="md:w-[28rem] ml-1 md:ml-7 w-96 relative  8 duration-500 h-64 shadow-md rounded-xl bg-pink-500">
+<div  className="lg:w-[28rem] ml-1 md:ml-7 w-96 relative  8 duration-500 h-64 shadow-md rounded-xl bg-pink-500">
        <img src={six} className="w-2/4 md:w-2/4 ml-40 pt-8  md:mt-0 md:ml-28 h-3/4  rounded-3xl md:h-full"/>
        <div className="md:absolute md:top-24 md:left-4 absolute top-14 left-4">
           <p className="text-xs ">
@@ -156,7 +156,7 @@ export default function Home() {
 {/* Men's wear */}
 <div className="md:flex md:items-center mt-4 md:justify-center block items-center">
       <div className=" md:flex block space-x-8">
-         <div className="md:w-[28rem] relative  duration-1000 mr-0 ml-1 md:mr-6 w-96  shadow-md rounded-xl bg-green-800  h-64">
+         <div className="lg:w-[28rem] relative  duration-1000 mr-0 ml-1 md:mr-6 w-96  shadow-md rounded-xl bg-green-800  h-64">
         <img className="w-2/4 md:w-2/4 ml-40 pt-8 md:ml-28  h-full" src={five} />
         <div className="absolute top-24 left-4">
           <p className="text-xs ">
@@ -172,9 +172,9 @@ export default function Home() {
       </div>
       {/* woman and bags */}
       <div className="flex space-x-8 mt-12 items-center justify-center md:mt-0 ">
-      <div className="md:w-52 w-40 h-52 relative    duration-600 rounded-2xl shadow-md md:h-64">
+      <div className="lg:w-52 w-40 h-52 relative  duration-600 rounded-2xl shadow-md md:h-64">
         <img className="w-full  rounded-2xl h-full" src={two} />
-        <div className="absolute top-9 left-4 md:absolute md:top-24 md:left-4">
+        <div className="absolute top-9 left-4 md:absolute md:top-16 md:left-4">
           <p className="text-xs ">
           New <br/>
         <span className="text-lg">Dresses</span><br/> 
@@ -187,7 +187,7 @@ export default function Home() {
       </div>
       <div className="relative">
       <div className="absolute inset-0 bg-black-dark opacity-20 rounded-2xl z-10"></div>
-      <div className="md:w-52 w-40 h-52 relative shadow-md md:h-64  bg-slate-200 rounded-2xl  ">
+      <div className="lg:w-52 w-40 h-52 relative shadow-md md:h-64  bg-slate-200 rounded-2xl  ">
         <img className="w-full  h-full" src={seven} />
         <div className="absolute top-16 left-4 md:absolute md:top-24 md:left-4">
           <p className="text-xs ">

@@ -9,12 +9,12 @@ import { Link } from 'react-router-dom';
 function Women() {
   const { handleView , shop , handleShop } = useContext(DataContext);
   return (
-    <div className='mt-16'>
+    <div className='mt-8 md:mt-16'>
       <div className='flex w-full  justify-center items-center '>
-        <div className='w-11/12 relative'>
-          <img src={one} className='w-full h-[60vh] rounded-md lg:h-full' />
-          <div className='absolute top-72 left-28 z-10'>
-            <div className='w-6/12 text-5xl font-bold text-white'>Discover timeless trends and modern looks.</div>
+        <div className='md:w-11/12 w-full relative'>
+          <img src={one} className='w-full h-[60vh] rounded-2xl lg:h-full' />
+          <div className='absolute md:absolute top-28 left-10 md:top-72 md:left-28  z-10'>
+            <div className='md:w-6/12 md:text-5xl text-2xl w-9/12 font-bold text-white'>Discover timeless trends and modern looks.</div>
           </div>
         </div>
       </div>
@@ -35,18 +35,18 @@ function Women() {
 
 
 
-    <div className='mt-32 mb-10 flex items-center justify-center'>
-    <div className="md:w-7/12 w-8/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6  md:grid md:grid-cols-3 md:gap-6">
+    <div className='mt-32 mb-10 drop-shadow-2xl flex items-center justify-center'>
+    <div className="md:w-full lg:w-7/12 w-9/12 sm:w-10/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6 sm:grid sm:grid-cols-2  md:grid md:grid-cols-3 md:gap-6">
     {data_women.map((item, index) => (
-      <div className="rounded-xl shadow-md bg-white p-1 h-[53vh] md:h-fit" key={index}>
-        <div className='relative'>
-        <img src={item.image} className="w-full h-fit object-cover rounded-md" alt={`Image ${index}`} />
+      <div className="rounded-xl  bg-white p-1 h-[86vh] md:h-[74vh]" key={index}>
+        <div className='relative w-full h-[68vh] md:h-[54vh]'>
+        <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
         <div className='absolute top-2 right-2'>
-          <Heart color='black' size={16} />
+          <Heart color='red' size={16} />
         </div>
-        <div className='absolute top-2 left-2'>
+        {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
-        </div>
+        </div> */}
         <button onClick={()=>handleView(item)} className='absolute bottom-0 right-3'>
           <Link to={'/view'}><Eye size={18}/></Link>
         </button>
@@ -57,7 +57,7 @@ function Women() {
         <div  className='pt-0 md:pt-1 md:text-left text-blue-400 text-left md:pl-2 pl-2 text-sm md:text-xs'>{item.price}</div>
         <div className='w-full  flex items-center justify-center md:block'>
           <div>
-          <button key={index}  disabled={shop[item.id]} onClick={()=>handleShop(item)} className={` ${shop[item.id] ? 'bg-gray-300' : 'bg-black-dark'} flex space-x-5 mt-4 md:flex md:space-x-24 pt-1.5 md:pt-3 pl-4 md:pl-4 text-white md:text-xs rounded-2xl md:w-52 md:h-10 md:rounded-3xl w-44 h-9`}> <div className='font-bold'>{ shop[item.id] ? "Added" : item.butt_ons }</div><div className={`${shop[item.id] ? "hidden": "block"}`}><ShoppingCart size={16}  className='mr-2 pb-0.5 text-blue-400 mt-0.5 '/></div></button>
+          <button key={index}  disabled={shop[item.id]} onClick={()=>handleShop(item)} className={` ${shop[item.id] ? 'bg-gray-300' : 'bg-black-dark'} flex space-x-14  mt-4 md:flex md:space-x-24 pt-1.5 md:pt-3 pl-4 md:pl-4 text-white md:text-xs rounded-2xl md:w-52 md:h-10 md:rounded-3xl w-52 h-9`}> <div className='font-bold'>{ shop[item.id] ? "Added" : item.butt_ons }</div><div className={`${shop[item.id] ? "hidden": "block"}`}><ShoppingCart size={16}  className='mr-2 pb-0.5 text-blue-400 mt-1.5 '/></div></button>
           </div>
         </div>
         

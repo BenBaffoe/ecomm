@@ -2,10 +2,12 @@ import one from '../../image_folder/headphone_2.jpg'
 import two from '../../image_folder/ear_Phone_4.jpg'
 import three from '../../image_folder/ear_Phone_6.jpg'
 import four  from '../../image_folder/headphone_6.jpg'
+import five from '../../image_folder/ear_phone_2.jpg'
+import six from '../../image_folder/headphone_10.jpg'
+import seven from '../../image_folder/headphone_9.jpg'
 
 
-
-const data = [
+const gadgets = [
     {
     id:1,
     image: one,
@@ -17,7 +19,7 @@ const data = [
 
     {
       id:2.0,
-      image: one,
+      image: six,
       price: 'Ghs 250.00',
       descript: 'Sennheiser Head phone',
       butt_ons: 'Add To Cart',
@@ -45,7 +47,7 @@ const data = [
 
     {
       id: 5.0,
-      image: three ,
+      image: seven ,
       price: 'Ghs 267.00',
       descript:'WF-1000XM5',
       butt_ons: 'Add To Cart',
@@ -63,7 +65,7 @@ const data = [
 
     {
       id: 7.0,
-      image: three , 
+      image: five , 
       price: 'Ghs 199.00',
       descript:'WF-1000XM5',
       butt_ons: 'Add To Cart',
@@ -93,4 +95,4 @@ const data = [
 
 
 
-export default data;
+export default gadgets;

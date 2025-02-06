@@ -261,7 +261,7 @@ const data_men = [
       
       {
         id: 39.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Shorts_3,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -282,7 +282,7 @@ const data_men = [
 
       {
         id: 41.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Short_7,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -305,7 +305,7 @@ const data_men = [
 
       {
         id: 43.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Short_5,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -326,7 +326,7 @@ const data_men = [
 
       {
         id: 45.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Short_6,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -370,7 +370,7 @@ const data_men = [
         title:'Touser',
         image: Trousers_3,
         price: 'Ghs 190.00',
-        descript: 'Sennheiser Head phone',
+        descript: 'Sennheiser phone',
         butt_ons: 'Add To Cart',
       },
 

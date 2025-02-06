@@ -1,7 +1,9 @@
-import one from '../../image_folder/women_1.jpg'
+import one from '../../image_folder/women_5.jpg'
 import two from '../../image_folder/women_3.jpg'
 import three from '../../image_folder/women_8.jpg'
 import four from '../../image_folder/women_7.jpg'
+import five from '../../image_folder/women_4.jpg'
+import six from '../../image_folder/women_6.jpg'
 
 
 const data_women = [
@@ -53,7 +55,7 @@ const data_women = [
 
        {
         id:23.0,
-        image : two,
+        image : five,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
@@ -64,7 +66,7 @@ const data_women = [
 
        {
         id:24.0,
-        image : two,
+        image : six,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
