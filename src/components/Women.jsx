@@ -36,9 +36,9 @@ function Women() {
 
 
     <div className='mt-32 mb-10 drop-shadow-2xl flex items-center justify-center'>
-    <div className="md:w-full lg:w-7/12 w-8/12 sm:w-10/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6 sm:grid sm:grid-cols-2  md:grid md:grid-cols-3 md:gap-6">
+    <div className="md:w-full lg:w-7/12 w-9/12 sm:w-10/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6 sm:grid sm:grid-cols-2  md:grid md:grid-cols-3 md:gap-6">
     {data_women.map((item, index) => (
-      <div className="rounded-xl  bg-white p-1 h-[91vh] md:h-[74vh]" key={index}>
+      <div className="rounded-xl  bg-white p-1 h-[86vh] md:h-[74vh]" key={index}>
         <div className='relative w-full h-[68vh] md:h-[54vh]'>
         <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
         <div className='absolute top-2 right-2'>
