@@ -11,7 +11,7 @@ function View() {
      <div className="w-full flex items-center justify-center h-screen  pt-2">
    {handlesView && (
     <div className='block lg:flex lg:space-x-20'>
-    <div className="w-6/12 h-72">
+    <div className="w-6/12  h-72">
       <img src={handlesView.image} className="w-full rounded-lg object-cover object-top shadow-md h-full" alt="Selected product"/>
     </div>
     <div>
