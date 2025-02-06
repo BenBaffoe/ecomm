@@ -9,7 +9,7 @@ import nine from "../../image_folder/European American Style Men's Casual Hollow
 import ten from "../../image_folder/Men's Aviator Metal Sunglasses - Goodfellow & Co Black.jpeg"
 import eleven from "../../image_folder/Multifunctional sports student men's watch steel strap - Black.jpeg"
 import twelve from "../../image_folder/Vintage Glasses Rim Pure Titanium Optical Anti-blue Light - Gun Color.jpeg"
-import five from  "../../image_folder/Amazon_com_ Mini Focus Unique Men Watches Casual Outdoor Wrist Watch (Chronograph_Waterproof_Super Luminous_Calendar) Soft Silicon Band Fashion Cool Watch for Men _ Clothing, Shoes & Jewelry.jpeg"
+// import five from  "../../image_folder/Amazon_com_ Mini Focus Unique Men Watches Casual Outdoor Wrist Watch (Chronograph_Waterproof_Super Luminous_Calendar) Soft Silicon Band Fashion Cool Watch for Men _ Clothing, Shoes & Jewelry.jpeg"
 import thirteen from "../../image_folder/Men's Sunglasses.jpeg"
 import fourth from  "../../image_folder/New Fashion Guy's Sun Glasses Polarized Sunglasses Men Classic Design Mirror Square Ladies Sun Glasses Women - C1 _ Polarized.jpeg"
 import  fifth from "../../image_folder/Men's Running Shorts Gym Shorts Sports Basketball Gym Breathable Quick Dry Drawstring Elastic Waist Liner Plain Short Sport Casual Activewear Black Grey Micro-elastic.jpeg"
@@ -261,7 +261,7 @@ const data_men = [
       
       {
         id: 39.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Shorts_3,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -282,7 +282,7 @@ const data_men = [
 
       {
         id: 41.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Short_7,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -305,7 +305,7 @@ const data_men = [
 
       {
         id: 43.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Short_5,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -326,7 +326,7 @@ const data_men = [
 
       {
         id: 45.0,
-        title:'Shorts',
+        title:'Shoes',
         image: Short_6,
         price: 'Ghs 190.00',
         descript: 'Sennheiser Head phone',
@@ -370,7 +370,7 @@ const data_men = [
         title:'Touser',
         image: Trousers_3,
         price: 'Ghs 190.00',
-        descript: 'Sennheiser Head phone',
+        descript: 'Sennheiser phone',
         butt_ons: 'Add To Cart',
       },
 

@@ -4,7 +4,7 @@ import two from '../image_folder/accessory-3002608_1920.jpg';
 import three from '../image_folder/woman-1846127_1280.jpg';
 import four from '../image_folder/blue_.jpg';
 import five from '../image_folder/red.jpg';
-import data from './data/NewArrivals';
+import Arrivals from './data/Arrivals';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Heart, ShoppingCart , Eye, Tag } from 'react-feather';
 import  { DataContext } from  '../components/Contexts/DataContext';
@@ -132,20 +132,20 @@ function Hero() {
 
   <div className='md:pt-20 bg-grey-thin md:pb-6 pt-10 pb-0'>
 
-    <div className='w-full flex justify-center items-center font-thin text-xl '>
-      <div className='hover:border-b-[1px] ease-in-out cursor-pointer hover:border-b-black-dark duration-200'>
+    <div className='w-full flex justify-center drop-shadow-2xl items-center font-thin text-xl '>
+      <div className='hover:border-b-[1px] ease-in-out lg:text-5xl text-3xl  cursor-pointer hover:border-b-black-dark duration-200'>
       New Arrivals
       </div>    
     </div>
   </div>
 
 
-  <div className="w-full  bg-grey-thin flex justify-center items-center h-fit md:h-fit pb-96">
+  <div className="w-full  bg-grey-thin drop-shadow-2xl flex justify-center items-center h-fit md:h-fit pt-40 pb-96">
   <div className="md:w-7/12 w-8/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6  md:grid md:grid-cols-3 md:gap-6">
-    {data.map((item, index) => (
-      <div  className="rounded-xl shadow-md bg-white p-1 h-[53vh] md:h-[58vh]" key={index}>
-        <div  className='relative'>
-        <img src={item.image} className="w-full h-3/4 object-cover rounded-md" alt={`Image ${index}`} />
+    {Arrivals.map((item, index) => (
+      <div  className="rounded-xl bg-white p-1 h-[71vh] md:h-[78vh]" key={index}>
+        <div  className='relative h-[53vh] md:h-[58vh]'>
+        <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
         <div className='absolute top-2 right-2'>
           <Heart color='black' size={16} />
         </div>
