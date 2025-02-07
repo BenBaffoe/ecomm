@@ -12,13 +12,13 @@ function Navbar() {
     <div className='w-full  lg:fixed top-0 left-0 right-0 overflow-hidden rounded-md shadow-md bg-white'>
       <nav className='flex py-4 pr-6 md:pb-6 pb-4  shadow-sm pl-2 md:pl-2 md:pr-2 justify-between md:flex md:justify-between '>
       <div>
-        <p className='md:pt-3 text-red-400 pt-0 md:pl-6 pl-0'>Buy <span className='text-blue-400'>Hive</span></p>
+        <p className='md:pt-3 text-red-400 text-lg pt-0 md:pl-6 pl-0'>Buy <span className='text-blue-400'>Hive</span></p>
       </div>
      
      <div className='flex  space-x-4 lg:hidden'>
      <Link to={'/shop'}>
       <button className='relative'>
-       <ShoppingCart size={16} />
+       <ShoppingCart size={21} />
       <div className='absolute -bottom-4 -left-3 bg-rose-400 text-black-dark p-[0.008rem]  w-5 rounded-full'>
         { shopLength && <div className='text-center '><p className='text-xs font-light text-center '>{shopLength}</p></div> }
       </div>
@@ -27,7 +27,7 @@ function Navbar() {
 
       <Link to={'/favs'}>
       <button className='relative'>
-       <Heart size={16} />
+       <Heart size={21} />
       <div className='absolute -bottom-4 -left-3 bg-rose-400 text-black-dark p-[0.008rem]  w-5 rounded-full'>
         { shopLength && <div className='text-center '><p className='text-xs font-light text-center '>{shopLength}</p></div> }
       </div>
@@ -35,7 +35,7 @@ function Navbar() {
       </Link>
 
       <button className='z-20 mb-4' onClick={()=>setShow(!show)}>
-        {show ?  <X size={16}/> : <Menu size={16} />}
+        {show ?  <X size={21}/> : <Menu size={21} />}
       </button>
       
      </div>

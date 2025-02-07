@@ -57,30 +57,30 @@ function Men() {
 
         <div className='w-full'>
           <p className='text-center font-light text-xl md:text-5xl pb-6 md:mb-10 mt-6 '>Categories</p>
-           <div className='flex items-center justify-center scrollbar-hide overflow-x-scroll space-x-6 p-2'>
+           <div className='flex items-center justify-center text-xs md:text-md scrollbar-hide overflow-x-scroll space-x-6 p-2'>
            {/* <div  className='md:w-20 md:h-9 cursor-pointer  w-16 h-6 text-center text-sm'>
               <Filter size={16}/>
             </div> */}
-           <div onClick={()=>handleShirts('All')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-44 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+           <div onClick={()=>handleShirts('All')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               All
             </div>
-            <div onClick={()=>handleShirts('Shirt')} className='w-32 h-6 cursor-pointer md:w-20 shadow-md md:h-9 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Shirt')} className='w-52 h-6 cursor-pointer md:w-20 shadow-md md:h-9 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Shirts
             </div>
-            <div onClick={()=>handleShirts('Glasses')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-44 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Glasses')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Glasses
             </div>
-            <div onClick={()=>handleShirts('Watch')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-44 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Watch')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Watch
             </div>
-            <div onClick={()=>handleShirts('Shoes')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-44 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Shoes')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Shoes
             </div>
           
-            <div onClick={()=>handleShirts('Shorts')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-44 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Shorts')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Shorts
             </div>
-            <div onClick={()=>handleShirts('Touser')} className='md:w-20 md:h-9 cursor-pointer  shadow-md  w-44 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Touser')} className='md:w-20 md:h-9 cursor-pointer  shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
                Trousers
             </div>
            </div>

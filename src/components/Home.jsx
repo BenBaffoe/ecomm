@@ -44,7 +44,7 @@ export default function Home() {
   <div className="w-full md:mb-28 mb-6 ">
     <div className="flex items-center justify-center">
 <div className="w-12/12 relative  ml-0  mt-4 md:mt-16 lg:mt-16 mr-0 sm:w-10/12 md:w-11/12 ">
-       <img src={one} className="w-full h-[50vh] md:h-[100vh]  rounded-2xl" />
+       <img src={one} className="w-full h-[60vh] md:h-[100vh] rounded-none  md:rounded-2xl" />
     </div>
     </div>
     

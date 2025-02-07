@@ -22,13 +22,13 @@ function Women() {
           <p className='text-center font-light text-xl md:text-5xl pb-6 md:mb-10 mt-6 '>Categories</p>
            <div className='flex items-center justify-center space-x-6 p-2'>
             <div className='w-16 h-6 cursor-pointer md:w-20 shadow-md md:h-9 text-center rounded-full md:pt-2 bg-grey-light text-sm'>
-              Shirts
+              Dresses
             </div>
             <div className='md:w-20 md:h-9 cursor-pointer shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-grey-light text-sm'>
-              Glasses
+              Bags
             </div>
             <div className='md:w-20 md:h-9 cursor-pointer  shadow-md  w-16 h-6 text-center rounded-full md:pt-2 bg-grey-light text-sm'>
-               Trousers
+               Shoes
             </div>
            </div>
 

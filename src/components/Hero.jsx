@@ -30,7 +30,7 @@ function Hero() {
 
     {
       image_render: three,
-      description: <p className='text-black-dark font-semibold lg:text-2xl pl-5 text-lg capitalize'>Step into a new era of quality with our innovative products, <span className='text-blue-400'>designed to exceed expectations</span> </p>,
+      description: <p className='text-white font-semibold lg:text-2xl pl-5 text-lg capitalize'>Step into a new era of quality with our innovative products, <span className='text-yellow-400'>designed to exceed expectations</span> </p>,
       butt_on: <button className='bg-red-thin rounded-3xl h-10 w-32 shadow-2xl'>Start Shopping</button>
     },
   ];
@@ -132,7 +132,7 @@ function Hero() {
 
   <div className='md:pt-20 bg-grey-thin md:pb-6 pt-10 pb-0'>
 
-    <div className='w-full flex justify-center drop-shadow-2xl items-center font-thin text-xl '>
+    <div className='w-full flex justify-center items-center font-thin text-xl '>
       <div className='hover:border-b-[1px] ease-in-out lg:text-5xl text-3xl  cursor-pointer hover:border-b-black-dark duration-200'>
       New Arrivals
       </div>    
@@ -141,7 +141,7 @@ function Hero() {
 
 
   <div className="w-full  bg-grey-thin drop-shadow-2xl flex justify-center items-center h-fit md:h-fit pt-40 pb-96">
-  <div className="md:w-7/12 w-8/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6  md:grid md:grid-cols-3 md:gap-6">
+  <div className="md:w-11/12 lg:w-8/12 w-8/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6 sm:grid sm:grid-cols-2  md:grid md:grid-cols-3 md:gap-14">
     {Arrivals.map((item, index) => (
       <div  className="rounded-xl bg-white p-1 h-[71vh] md:h-[78vh]" key={index}>
         <div  className='relative h-[53vh] md:h-[58vh]'>
@@ -149,9 +149,9 @@ function Hero() {
         <div className='absolute top-2 right-2'>
           <Heart color='black' size={16} />
         </div>
-        <div className='absolute top-2 left-2'>
+        {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
-        </div>
+        </div> */}
         <button onClick={()=>handleView(item)} className='absolute  bottom-0 right-3'>
         <Link to={'/view'}>
          <Eye size={18}/>
@@ -166,7 +166,7 @@ function Hero() {
         <div  className='pt-0 md:pt-1 md:text-left text-blue-400 text-left md:pl-2 pl-2 text-sm md:text-xs'>{item.price}</div>
         <div className='w-full  flex items-center justify-center md:block'>
           <div>
-          <button key={index}  disabled={shop[item.id]} onClick={()=>handleShop(item)} className={` ${shop[item.id] ? 'bg-gray-300' : 'bg-black-dark'} flex space-x-5 md:flex md:space-x-24 pt-1.5 md:pt-3 pl-4 md:pl-4 text-white md:text-xs mt-2 rounded-2xl md:w-52 md:h-10 md:rounded-3xl w-44 h-9`}> <div className='font-bold'>{ shop[item.id] ? "Added" : item.butt_ons }</div><div className={`${shop[item.id] ? "hidden": "block"}`}><ShoppingCart size={16}  className='mr-2 pb-0.5 text-blue-400 mt-0.5 '/></div></button>
+          <button key={index}  disabled={shop[item.id]} onClick={()=>handleShop(item)} className={` ${shop[item.id] ? 'bg-gray-300' : 'bg-black-dark'} flex space-x-8 md:flex md:space-x-24 pt-1.5 md:pt-3 pl-4 md:pl-4 text-white md:text-xs mt-2 rounded-2xl md:w-52 md:h-10 md:rounded-3xl w-44 h-9`}> <div className='font-bold'>{ shop[item.id] ? "Added" : item.butt_ons }</div><div className={`${shop[item.id] ? "hidden": "block"}`}><ShoppingCart size={16}  className='mr-2 pb-0.5 text-blue-400 mt-1.5 '/></div></button>
           </div>
         </div>
         
