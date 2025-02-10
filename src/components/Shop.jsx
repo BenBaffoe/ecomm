@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { DataContext } from "./Contexts/DataContext";
+import { ChevronDown, ChevronUp } from "react-feather";
 
 function Shop() {
   const { selectedItems, setSelectedItems } = useContext(DataContext);
@@ -9,15 +10,68 @@ function Shop() {
     setSelectedItems((prev) => prev.filter((_, i) => i !== index));
   };
 
+   const [handleQuantity , setHandleQuantity] = useState({});
+   const [price , setPrice] = useState({});
+   const [total , setTotal] = useState(0);
+
+   function handleValueChange(value, prices) {
+    setHandleQuantity((prev) => {
+      const currentCount = prev[value] || 0;
+      const newCount = currentCount + 1;
+
+      setPrice((prevPrice) => {
+        const updatedPrice = { ...prevPrice, [value]: newCount * prices };
+        updateTotal(updatedPrice); // Update total after setting price
+        return updatedPrice;
+      });
+
+      return { ...prev, [value]: newCount };
+    });
+  }
+
+  // Function to decrease quantity and update price
+  function handleValueReduction(value, prices) {
+    setHandleQuantity((prev) => {
+      const currentCount = prev[value] || 0;
+      const newCount = Math.max(currentCount - 1, 0); // Prevent negative quantity
+
+      setPrice((prevPrice) => {
+        const updatedPrice = { ...prevPrice, [value]: newCount * prices };
+        updateTotal(updatedPrice); // Update total after setting price
+        return updatedPrice;
+      });
+
+      return { ...prev, [value]: newCount };
+    });
+  }
+
+  // Function to calculate subtotal
+  function updateTotal(updatedPrice) {
+    const totalAmount = Object.values(updatedPrice).reduce((acc, curr) => acc + curr, 0);
+    setTotal(totalAmount);
+  }
+
+  // function totalResult (){
+    
+  //   const totalAmount ;
+  //   setTotal(totalAmount)
+  // }
+
+
+ 
+
+
+
+
   return (
     <div className="w-screen block mt-10 md:mt-0 md:flex  overflow-x-scroll  h-screen p-6">
-      <div className="block w-full h-fit mt-4 md:w-8/12 md:space-x-0 p-6 shadow-md rounded-md">
+      <div className="block w-full h-fit mt-4 md:w-8/12 md:space-x-0 p-6 shadow-md md:shadow-none rounded-md">
         {/* Header Row */}
         <div className="flex w-full justify-between font-semibold text-gray-700 border-b pb-3">
           <div className="w-5/12   md:w-4/12">Product</div>
-          <div className="w-3/12 md:w-3/12 text-center">Quantity</div>
+          <div className="w-3/12 md:w-4/12 text-center">Quantity</div>
           <div className="hidden md:flex   md:w-2/12 text-center">Total</div>
-          <div className="hidden md:flex  md:w-2/12  text-center">Actions</div>
+          <div className="hidden md:flex  md:w-2/12 pl-6  text-center">Actions</div>
         </div>
 
         {/* Cart Items */}
@@ -39,11 +93,15 @@ function Shop() {
                 </div>
 
                 {/* Quantity (For now, it's static) */}
-                <div className="w-2/12 text-center">1</div>
+                <div className="w-3/12 flex justify-evenly text-center">
+                <button onClick={()=>handleValueChange(item.id , item.price)} className="rounded-full shadow-sm bg-black-newdark cursor-pointer h-fit w-fit"><ChevronUp color="white" size={18} /></button>
+                <div>{handleQuantity[item.id] || 0}</div>
+                <button onClick={()=>handleValueReduction(item.id)} className="rounded-full shadow-sm bg-black-newdark  h-fit w-fit"><ChevronDown color="white" size={18}/></button>
+                </div>
 
                 {/* Total Price */}
                 <div className=" hidden md:w-2/12 md:block  text-center font-semibold text-gray-700">
-                  {item.price}
+                 Ghs {price[item.id] || 0.00}
                 </div>
 
                 {/* Remove Button */}
@@ -68,7 +126,7 @@ function Shop() {
      <div className="text-md text-gray-500 font-bold p-4">Order Summary</div>
      <div className="flex justify-between text-sm pl-4 pt-2">
       <div>Subtotal</div>
-      <div>Ghs 0.00</div>
+      <div>Ghs {total}</div>
      </div>
      <div className="flex justify-between text-sm pl-4 pt-4">
       <div>Delivery Fee</div>
@@ -81,7 +139,7 @@ function Shop() {
 
      <div className="pt-10 md:mt-72">
       <div className="flex items-center justify-center w-full">
-        <button className="text-sm font-semibold text-white bg-black-neutral hover:bg-black-dark w-11/12 h-12 shadow-md rounded-2xl ">Pay Amount</button>
+        <button className="text-sm font-semibold text-white bg-black-neutral hover:bg-black-dark w-full h-12 shadow-md rounded-2xl ">Pay Amount</button>
       </div>
      </div>
       </div>

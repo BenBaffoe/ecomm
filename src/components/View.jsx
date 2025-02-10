@@ -3,7 +3,7 @@ import { DataContext } from './Contexts/DataContext'
 
 
 function View() {
-  const { handlesView } = useContext(DataContext);
+  const { handlesView , handleShop } = useContext(DataContext);
   return (
 
      <div  className='w-full pb-20 bg-grey-thin'>
@@ -21,7 +21,7 @@ function View() {
       <p className='font-normal text-slate-600 '>{handlesView.price}</p>
       <div className='font-light text-sm pt-4 w-80'>{handlesView.assay}</div>
       <div className=''>
-        <button className='md:h-10 md:w-48 h-12 w-full text-md font-semibold md:text-md  rounded-md duration-700 hover:-translate-y-1 hover:bg-black-dark  text-white mt-14 pt-2 pr-2 pl-2 pb-4  bg-black-neutral'>
+        <button onClick={()=>handleShop(handlesView)} className='md:h-10 md:w-48 h-12 w-full text-md font-semibold md:text-md  rounded-md duration-700 hover:-translate-y-1 hover:bg-black-dark  text-white mt-14 pt-2 pr-2 pl-2 pb-4  bg-black-neutral'>
          <p className='pb-6'> Add To Cart</p>
         </button>
         {/* <button className='md:h-10 md:w-48 h-9 w-44 text-xs md:text-md rounded-md text-white mt-14 pt-2 pr-2 pl-2  duration-700 hover:-translate-y-1 pb-4 border border-black-dark bg-white'>

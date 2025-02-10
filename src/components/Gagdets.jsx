@@ -43,11 +43,11 @@ function Gagdets() {
 
 
     <div className='mt-32 mb-10 drop-shadow-2xl flex items-center overflow-hidden justify-center'>
-    <div className="md:w-full w-9/12 lg:w-7/12 sm:w-9/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6 sm:grid sm:grid-cols-2  md:grid md:grid-cols-3 md:gap-4">
+    <div className="md:w-full w-8/12 lg:w-7/12 sm:w-9/12 mt-10 md:mt-0 grid grid-flow-col-1 gap-6 sm:grid sm:grid-cols-2  md:grid md:grid-cols-3 md:gap-4">
     {gadgets.map((item, index) => (
-      <div className="rounded-xl  bg-white p-1 h-[70vh] md:h-[72vh]" key={index}>
-        <div className='relative  h-[50vh] w-full  md:h-[52vh]'>
-        <img src={item.image} className="w-11/12 h-full object-cover rounded-md" alt={`Image ${index}`} />
+      <div className="rounded-xl  bg-white p-1 h-[67vh] md:h-[68vh]" key={index}>
+        <div className='relative  h-[48vh] w-full  md:h-[49vh]'>
+        <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
         <div className='absolute top-2 right-2'>
           <Heart color='black' size={16} />
         </div>

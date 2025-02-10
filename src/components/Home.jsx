@@ -41,7 +41,7 @@ export default function Home() {
   
 
   return (
-  <div className="w-full md:mb-28 mb-6 ">
+  <div className="w-full md:mb-28 mt-6 mb-6 ">
     <div className="flex items-center justify-center">
 <div className="w-12/12 relative  ml-0  mt-4 md:mt-16 lg:mt-16 mr-0 sm:w-10/12 md:w-11/12 ">
        <img src={one} className="w-full h-[60vh] md:h-[100vh] rounded-none  md:rounded-2xl" />
@@ -49,8 +49,8 @@ export default function Home() {
     </div>
     
     
-    <div className="absolute z-10 top-40 left-6  md:absolute md:top-96 md:left-28 lg:absolute lg:top-96 lg:left-28">
-      <div className="text-blue-400 font-bold text-lg md:text-4xl lg:text-4xl border-b border-b-gray-50 pb-4">Contemporary  <span className="text-white">and urban energy</span></div>
+    <div className="absolute z-10 top-48 left-6  md:absolute md:top-96 md:left-28 lg:absolute lg:top-96 lg:left-28">
+      <div className="text-red-400 font-bold text-xl md:text-4xl lg:text-4xl border-b border-b-gray-50 pb-4">Contemporary  <span className="text-white">and urban energy</span></div>
       <div className="flex space-x-16 pt-6">
       <div>
      <div className="flex text-slate-200  md:text-black-neutral text-sm sm:text-base md:text-base lg:text-base space-x-2">

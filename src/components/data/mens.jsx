@@ -31,7 +31,7 @@ const data_men = [
      id:10.0,
      title:'Shirt',
      image : one,
-     price: 'Ghs 190.00',
+     price: ' 190.00',
      descript: 'Sennheiser Head phone',
      butt_ons: 'Add To Cart',
       assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -43,7 +43,7 @@ const data_men = [
      id:11.0,
      title:'Shirt',
      image : two,
-     price: 'Ghs 190.00',
+     price: '190.00',
      descript: 'Sennheiser Head phone',
      butt_ons: 'Add To Cart',
       assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -53,7 +53,7 @@ const data_men = [
     id: 12.0,
     title:'Shirt',
     image: three,
-    price: 'Ghs 190.00',
+    price: '190.00',
     descript: 'Sennheiser Head phone',
     butt_ons: 'Add To Cart',
      assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -64,7 +64,7 @@ const data_men = [
        id:13.0,
        title:'Shirt',
        image: four,
-       price: 'Ghs 190.00',
+       price: '190.00',
        descript: 'Sennheiser Head phone',
        butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -74,7 +74,7 @@ const data_men = [
         id:14.0,
         title:'Shirt',
         image : two,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -85,7 +85,7 @@ const data_men = [
         id:15.0,
         title:'Shirt',
         image : one,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -97,7 +97,7 @@ const data_men = [
         id: 16.0,
         title:'Shirt',
         image: three,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -108,7 +108,7 @@ const data_men = [
            id:17.0,
            title:'Shirt',
            image: four,
-           price: 'Ghs 190.00',
+           price: '190.00',
            descript: 'Sennheiser Head phone',
            butt_ons: 'Add To Cart',
            assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -118,7 +118,7 @@ const data_men = [
             id:18.0,
             title:'Shirt',
             image : two,
-            price: 'Ghs 190.00',
+            price: '190.00',
             descript: 'Sennheiser Head phone',
             butt_ons: 'Add To Cart',
            assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -129,7 +129,7 @@ const data_men = [
             id: 26.0,
             title:'Watch',
             image: six,
-            price: 'Ghs 190.00',
+            price: '190.00',
             descript: 'Sennheiser Head phone',
             butt_ons: 'Add To Cart',
            assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -141,7 +141,7 @@ const data_men = [
         id: 26.0,
         title:'Watch',
         image: six,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -152,7 +152,7 @@ const data_men = [
         id: 27.0,
         title:'Glasses',
         image: seven,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -163,7 +163,7 @@ const data_men = [
         id: 28.0,
         title:'Watch',
         image: eight,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -174,7 +174,7 @@ const data_men = [
         id: 29.0,
         title:'Watch',
         image: nine,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -185,7 +185,7 @@ const data_men = [
         id: 30.0,
         title:'Glasses',
         image: ten,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser  Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -196,7 +196,7 @@ const data_men = [
         id: 31.0,
         title:'Glasses',
         image: twelve,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -208,7 +208,7 @@ const data_men = [
         id: 32.0,
         title:'Watch',
         image: eleven,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -220,7 +220,7 @@ const data_men = [
         id: 33.0,
         title:'Watch',
         image: eleven,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -230,7 +230,7 @@ const data_men = [
         id: 34.0,
         title:'Glasses',
         image: thirteen,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -241,7 +241,7 @@ const data_men = [
         id: 35.0,
         title:'Glasses',
         image: fourth,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -252,7 +252,7 @@ const data_men = [
         id: 36.0,
         title:'Watch',
         image: eleven,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -264,7 +264,7 @@ const data_men = [
         id: 37.0,
         title:'Shorts',
         image: fifth,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -275,7 +275,7 @@ const data_men = [
         id: 38.0,
         title:'Shorts',
         image: Shorts_2,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -286,7 +286,7 @@ const data_men = [
         id: 39.0,
         title:'Shoes',
         image: Shorts_3,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -298,7 +298,7 @@ const data_men = [
         id: 40.0,
         title:'Shorts',
         image: Shorts_4,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -309,7 +309,7 @@ const data_men = [
         id: 41.0,
         title:'Shoes',
         image: Short_7,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -321,7 +321,7 @@ const data_men = [
         id: 42.0,
         title:'Shorts',
         image: Short_5,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -334,7 +334,7 @@ const data_men = [
         id: 43.0,
         title:'Shoes',
         image: Short_5,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -346,7 +346,7 @@ const data_men = [
         id: 44.0,
         title:'Shorts',
         image: Short_8,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -357,7 +357,7 @@ const data_men = [
         id: 45.0,
         title:'Shoes',
         image: Short_6,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -370,7 +370,7 @@ const data_men = [
         id: 47.0,
         title:'Touser',
         image: Trousers_2,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -380,7 +380,7 @@ const data_men = [
         id: 46.0,
         title:'Touser',
         image: Trousers,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -391,7 +391,7 @@ const data_men = [
         id: 48.0,
         title:'Touser',
         image: Trousers_2,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser Head phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '
@@ -402,7 +402,7 @@ const data_men = [
         id: 49.0,
         title:'Touser',
         image: Trousers_3,
-        price: 'Ghs 190.00',
+        price: '190.00',
         descript: 'Sennheiser phone',
         butt_ons: 'Add To Cart',
        assay:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus orci, scelerisque in dui a, consequat tempor velit. Aenean in mollis ex. Fusce vulputate ex eget neque pellentesque, a hendrerit diam ullamcorper. '

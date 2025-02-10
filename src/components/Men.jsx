@@ -45,7 +45,7 @@ function Men() {
   return (
     <div>
         <div className='flex w-full overflow-hidden items-center justify-center'>
-            <div className='w-full relative h-[50vh] mb-4 rounded-2xl mt-10 md:mt-16  md:h-[100vh]'>
+            <div className='w-full drop-shadow-md relative h-[50vh] mb-4 rounded-2xl mt-10 md:mt-16  md:h-[100vh]'>
                 <img src={one} className='w-full md:w-11/12 md:ml-10 ml-0 h-full rounded-2xl'/>
                 <div className='absolute top-0 md:w-11/12 md:ml-10 ml-0 bg-black-dark opacity-30 rounded-2xl w-full  h-[50vh]  z-20 md:h-[100vh] '>
                   <div className='text-red-thin z-50 text-left text-lg  left-2 absolute top-4 md:absolute md:top-10 md:text-6xl font-extrabold md:left-16'>
@@ -61,26 +61,26 @@ function Men() {
            {/* <div  className='md:w-20 md:h-9 cursor-pointer  w-16 h-6 text-center text-sm'>
               <Filter size={16}/>
             </div> */}
-           <div onClick={()=>handleShirts('All')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+           <div onClick={()=>handleShirts('All')} className='md:w-20 md:h-9 cursor-pointer shadow-md w-fit h-fit p-2  text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               All
             </div>
-            <div onClick={()=>handleShirts('Shirt')} className='w-52 h-6 cursor-pointer md:w-20 shadow-md md:h-9 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Shirt')} className='w-fit h-fit p-2 cursor-pointer md:w-20 shadow-md md:h-9 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Shirts
             </div>
-            <div onClick={()=>handleShirts('Glasses')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Glasses')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-fit h-fit p-2 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Glasses
             </div>
-            <div onClick={()=>handleShirts('Watch')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Watch')} className='md:w-20 md:h-9 cursor-pointer shadow-md w-fit h-fit p-2  text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Watch
             </div>
-            <div onClick={()=>handleShirts('Shoes')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Shoes')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-fit h-fit p-2  text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Shoes
             </div>
           
-            <div onClick={()=>handleShirts('Shorts')} className='md:w-20 md:h-9 cursor-pointer shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Shorts')} className='md:w-20 md:h-9 cursor-pointer shadow-md w-fit h-fit p-2  text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
               Shorts
             </div>
-            <div onClick={()=>handleShirts('Touser')} className='md:w-20 md:h-9 cursor-pointer  shadow-md  w-52 h-6 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
+            <div onClick={()=>handleShirts('Touser')} className='md:w-20 md:h-9 cursor-pointer  shadow-md w-fit h-fit p-2 text-center rounded-full md:pt-2 bg-gray-50 text-sm'>
                Trousers
             </div>
            </div>
@@ -95,7 +95,7 @@ function Men() {
         <div className='relative h-[50vh] w-full  md:h-[54vh]'>
         <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
         <div className='absolute top-2 right-2'>
-          <Heart color='red' size={16} />
+          <Heart color='red' size={16} fillRule='' />
         </div>
         {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
