@@ -3,12 +3,10 @@ import { DataContext } from "./Contexts/DataContext";
 import { ChevronDown, ChevronUp } from "react-feather";
 
 function Shop() {
-  const { selectedItems, setSelectedItems } = useContext(DataContext);
+  const { selectedItems, setSelectedItems , shop , setShop } = useContext(DataContext);
 
   // Function to remove an item from the cart
-  const removeItem = (index) => {
-    setSelectedItems((prev) => prev.filter((_, i) => i !== index));
-  };
+ 
 
    const [handleQuantity , setHandleQuantity] = useState({});
    const [price , setPrice] = useState({});
@@ -29,6 +27,12 @@ function Shop() {
     });
   }
 
+  const removeItem = (index) => {
+    setSelectedItems((prev) => prev.filter((_, i) => i !== index));
+    // setShop(((prev) => ({ [index]: false })));
+    setTotal(0);
+  };
+
   // Function to decrease quantity and update price
   function handleValueReduction(value, prices) {
     setHandleQuantity((prev) => {
@@ -36,11 +40,18 @@ function Shop() {
       const newCount = Math.max(currentCount - 1, 0); // Prevent negative quantity
 
       setPrice((prevPrice) => {
-        const updatedPrice = { ...prevPrice, [value]: newCount * prices };
-        updateTotal(updatedPrice); // Update total after setting price
-        return updatedPrice;
-      });
+        if(currentCount <= 0 ){
+          const updatedPrice = { ...prevPrice, [value]:  prices * currentCount }
+          updateTotal(updatedPrice);
+          return updatedPrice;
+        }else{
+          const updatedPrice = { ...prevPrice, [value]:  prices - (prices - prices * newCount ) };
+          console.log(updatedPrice , "jjjjjjjjjj") 
 
+          updateTotal(updatedPrice); // Update total after setting price
+          return updatedPrice;
+        }
+      });
       return { ...prev, [value]: newCount };
     });
   }
@@ -51,11 +62,7 @@ function Shop() {
     setTotal(totalAmount);
   }
 
-  // function totalResult (){
-    
-  //   const totalAmount ;
-  //   setTotal(totalAmount)
-  // }
+
 
 
  
@@ -96,7 +103,7 @@ function Shop() {
                 <div className="w-3/12 flex justify-evenly text-center">
                 <button onClick={()=>handleValueChange(item.id , item.price)} className="rounded-full shadow-sm bg-black-newdark cursor-pointer h-fit w-fit"><ChevronUp color="white" size={18} /></button>
                 <div>{handleQuantity[item.id] || 0}</div>
-                <button onClick={()=>handleValueReduction(item.id)} className="rounded-full shadow-sm bg-black-newdark  h-fit w-fit"><ChevronDown color="white" size={18}/></button>
+                <button onClick={()=>handleValueReduction(item.id , item.price)} className="rounded-full shadow-sm bg-black-newdark  h-fit w-fit"><ChevronDown color="white" size={18}/></button>
                 </div>
 
                 {/* Total Price */}
@@ -130,11 +137,11 @@ function Shop() {
      </div>
      <div className="flex justify-between text-sm pl-4 pt-4">
       <div>Delivery Fee</div>
-      <div>Ghs 0.00</div>
+      <div>Ghs 0</div>
      </div>
      <div className="flex justify-between text-sm pl-4 pt-4">
       <div>Total</div>
-      <div>Ghs 0.00</div>
+      <div>Ghs {total}</div>
      </div>
 
      <div className="pt-10 md:mt-72">

@@ -43,13 +43,13 @@ export default function Home() {
   return (
   <div className="w-full md:mb-28 mt-6 mb-6 ">
     <div className="flex items-center justify-center">
-<div className="w-12/12 relative  ml-0  mt-4 md:mt-16 lg:mt-16 mr-0 sm:w-10/12 md:w-11/12 ">
-       <img src={one} className="w-full h-[60vh] md:h-[100vh] rounded-none  md:rounded-2xl" />
+<div className="w-12/12 relative  ml-0  mt-4 md:mt-16 lg:mt-16 mr-0 sm:w-11/12 md:w-11/12 ">
+       <img src={one} className="w-full h-[60vh] sm:h-[65vh] md:h-[100vh] rounded-none  md:rounded-2xl" />
     </div>
     </div>
     
     
-    <div className="absolute z-10 top-48 left-6  md:absolute md:top-96 md:left-28 lg:absolute lg:top-96 lg:left-28">
+    <div className="absolute z-10 top-48 left-6 sm:absolute sm:top-44 sm:left-24  md:absolute md:top-96 md:left-28 lg:absolute lg:top-96 lg:left-28">
       <div className="text-red-400 font-bold text-xl md:text-4xl lg:text-4xl border-b border-b-gray-50 pb-4">Contemporary  <span className="text-white">and urban energy</span></div>
       <div className="flex space-x-16 pt-6">
       <div>
@@ -91,14 +91,14 @@ export default function Home() {
 
       <div className="w-full">
       <div className="md:mb-20 mb-16  mt-14 md:mt-20">
-          <p className="font-bold text-center text-gray-600 sm:mt-10  animate-on-scroll  slide-in-from-top-28 duration-700 text-xl md:text-3xl">Fashion and offers for everybody</p>
+          <p className="font-bold text-center text-gray-600 sm:mt-10 duration-700 text-xl md:text-3xl">Fashion and offers for everybody</p>
       </div>
 
 
    {/* Earphone */}
-      <div className='md:flex md:items-center md:justify-center block items-center '>
-      <div className="md:flex md:space-x-8 flex space-x-12 p-2 md:p-0 ">
-      <div className="w-40 md:h-64 md:w-52 mb-12 md:mb-2 relative  rounded-3xl shadow-lg h-52">
+      <div className='sm:flex  md:items-center sm:justify-center block items-center '>
+      <div className="md:flex flex items-center justify-center  space-x-8 ">
+      <div className="w-40 md:h-64 md:w-52 mb-12 sm:mb-2 relative  rounded-3xl shadow-lg h-52">
        <img src={four} className="w-full rounded-3xl h-full"/>
        <div className="absolute top-16 left-4 md:absolute md:top-24 md:left-4">
           <p className="text-xs text-white">
@@ -136,7 +136,8 @@ export default function Home() {
  
  {/* laptop  */}
 
-<div  className="lg:w-[28rem] ml-1 md:ml-7 w-96 relative  8 duration-500 h-64 shadow-md rounded-xl bg-pink-500">
+<div className="flex justify-center items-center">
+  <div  className="lg:w-[28rem] ml-1 md:ml-7 w-96  relative  8 duration-500 h-64 shadow-md rounded-xl bg-pink-500">
        <img src={six} className="w-2/4 md:w-2/4 ml-40 pt-8  md:mt-0 md:ml-28 h-3/4  rounded-3xl md:h-full"/>
        <div className="md:absolute md:top-24 md:left-4 absolute top-14 left-4">
           <p className="text-xs ">
@@ -148,16 +149,21 @@ export default function Home() {
             <p className="text-xs text-white">Browse</p>
           </button>
         </div>
-       </div>     
+       </div>  
+</div>
+   
 </div>
 
 
 
 {/* Men's wear */}
-<div className="md:flex md:items-center mt-4 md:justify-center block items-center">
-      <div className=" md:flex block space-x-8">
+<div className="sm:flex sm:items-center mt-4 sm:mt-4 sm:justify-center block items-center">
+      <div className=" md:flex md:justify-between flex items-center justify-center  space-x-8">
          <div className="lg:w-[28rem] relative  duration-1000 mr-0 ml-1 md:mr-6 w-96  shadow-md rounded-xl bg-green-800  h-64">
-        <img className="w-2/4 md:w-2/4 ml-40 pt-8 md:ml-28  h-full" src={five} />
+        <div>
+           <img className="w-2/4 md:w-2/4 ml-40 pt-8 md:ml-28  h-full" src={five} />
+        </div>
+       
         <div className="absolute top-24 left-4">
           <p className="text-xs ">
           New <br/>
@@ -171,8 +177,8 @@ export default function Home() {
       </div> 
       </div>
       {/* woman and bags */}
-      <div className="flex space-x-8 mt-12 items-center justify-center md:mt-0 ">
-      <div className="lg:w-52 w-40 h-52 relative  duration-600 rounded-2xl shadow-md md:h-64">
+      <div className="flex space-x-8  mt-12  items-center justify-center sm:mt-0 ">
+      <div className="lg:w-52 w-40 h-52 sm:ml-2 ml-0 relative  duration-600 rounded-2xl shadow-md md:h-64">
         <img className="w-full  rounded-2xl h-full" src={two} />
         <div className="absolute top-9 left-4 md:absolute md:top-16 md:left-4">
           <p className="text-xs ">
@@ -263,14 +269,14 @@ export default function Home() {
 
 
 <div className="w-full mt-24">
-<div className="md:flex md:items-center justify-between block">
+<div className="md:flex md:items-center mb-44 justify-between block">
   {/* first discount */}
   <div className="text-md md:w-5/12 w-full mt-24 pl-6 text-black-dark">
 <p className="text-2xl font-bold pb-10">50% <span className="text-red-500">Discount</span></p>
 Unlock incredible savings with our exclusive discounts! For a limited time, enjoy up to 50% off on a wide range of products, including fashion, electronics, and home essentials. Whether you're shopping for the latest trends or upgrading your gadgets, we have deals that you can't resist. Plus, sign up for our newsletter and get an additional 10% off your first purchase. Don't miss out—these offers are only available while stocks last
 </div>
-<div className="md:w-5/12 w-full ml-8 md:ml-0 h-[70vh] mt-10 -skew-x-6 transform">
-  <img src={eight} className="w-3/4 rounded-2xl h-4/4" />
+<div className="md:w-5/12 w-full ml-16 md:ml-0 h-[65vh] md:h-[68vh] mt-10 -skew-x-6 transform">
+  <img src={eight} className="w-3/4 rounded-2xl h-full" />
 </div>
 </div>
 
@@ -279,8 +285,8 @@ Unlock incredible savings with our exclusive discounts! For a limited time, enjo
 
 
 
-<div className="md:flex  md:mt-32 mt-0 block md:items-center justify-between">
-  <div className="md:w-5/12 w-full md:ml-8 ml-4 md:h-[70vh] h-[50vh] mt-4 -skew-x-6 transform">
+<div className="md:flex  md:mt-32 mt-16 block md:items-center justify-between">
+  <div className="md:w-5/12 w-full mb-20 md:ml-8 ml-10 md:h-[68vh] h-[65vh] mt-4 -skew-x-6 transform">
   <img src={nine} className="w-3/4 rounded-2xl h-4/4" />
 </div>
 <div className="text-md md:w-5/12 w-full mt-0 pl-4 md:pl-2 text-black-dark">

@@ -76,7 +76,7 @@ function Signup() {
   }
 
   return (
-    <div>
+    <div className='flex items-center justify-center p-2 sm:p-6 md:p-0 md:block'>
       <div className='sm:block md:flex lg:flex block bg-white w-full'>
       <div className='w-0   lg:w-6/12'>
           <img src={one} className='w-0 sm:w-0 sm:h-0 lg:w-3/4 lg:h-screen md:w-3/4 md:h-screen '/>
@@ -96,7 +96,7 @@ function Signup() {
             Username
           </label>
           </div>
-          <input name='username' placeholder='username' className='w-11/12 sm:w-5/5 lg:w-4/5 md:w-4/5 sm:h-16 md:h-12 lg:h-12  bg-gray-100 outline-none pl-3 h-12 rounded-lg mt-2 mb-4' />
+          <input name='username' placeholder='username' className='w-11/12 sm:w-5/5 lg:w-4/5 md:w-4/5 sm:h-14 md:h-12 lg:h-12  bg-gray-100 outline-none pl-3 h-12 rounded-lg mt-2 mb-4' />
 
 
           {/* Email */}
@@ -105,7 +105,7 @@ function Signup() {
             Email address
           </label>
             </div>
-            <input name='email' placeholder='email here' className='w-11/12 sm:w-5/5 lg:w-4/5 md:w-4/5  sm:h-16 md:h-12 lg:h-12  bg-gray-100 outline-none h-12 pl-3 rounded-lg mt-2 mb-4' />
+            <input name='email' placeholder='email here' className='w-11/12 sm:w-5/5 lg:w-4/5 md:w-4/5  sm:h-14 md:h-12 lg:h-12  bg-gray-100 outline-none h-12 pl-3 rounded-lg mt-2 mb-4' />
 
            {/* password */}
             <div>
@@ -113,7 +113,7 @@ function Signup() {
               Password
             </label>
             </div>
-            <input name='password' placeholder='password here'  type='password' className='w-11/12   pl-3 sm:w-5/5 lg:w-4/5 md:w-4/5  sm:h-16 md:h-12 lg:h-12  bg-gray-100 outline-none h-12 rounded-lg mt-2 mb-4'/>
+            <input name='password' placeholder='password here'  type='password' className='w-11/12   pl-3 sm:w-5/5 lg:w-4/5 md:w-4/5  sm:h-14 md:h-12 lg:h-12  bg-gray-100 outline-none h-12 rounded-lg mt-2 mb-4'/>
 
            {/* confirmpassword */}
             <div>
@@ -121,11 +121,11 @@ function Signup() {
              Confirm Password
             </label>
             </div>
-            <input name='confirmpassword' placeholder='confirm password' className='w-11/12 sm:w-5/5 lg:w-4/5  sm:h-16 md:h-12 lg:h-12 md:w-4/5 h-12  bg-gray-100 outline-none pl-3 rounded-lg mt-2 mb-4'/>
+            <input name='confirmpassword' placeholder='confirm password' className='w-11/12 sm:w-5/5 lg:w-4/5  sm:h-14 md:h-12 lg:h-12 md:w-4/5 h-12  bg-gray-100 outline-none pl-3 rounded-lg mt-2 mb-4'/>
 
 
 
-            <button  className='w-11/12  sm:h-16 md:h-12 lg:h-12 sm:w-5/5 lg:w-4/5 md:w-4/5 rounded-xl h-14 mt-6 hover:border hover:border-black-dark hover:bg-white hover:text-black-dark bg-blue-400 duration-500'>
+            <button  className='w-11/12  sm:h-14 md:h-14 lg:h-14 sm:w-5/5 lg:w-4/5 md:w-4/5 rounded-xl h-14 mt-6 hover:border hover:border-black-dark hover:bg-white hover:text-black-dark bg-blue-400 duration-500'>
              <div className='text-lg font-bold  duration-500 flex justify-center items-center text-center'>
                {show ? <img src={two} className='w-16 h-16' /> : <p>Register</p> }  
              </div>
