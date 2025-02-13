@@ -2,12 +2,12 @@ import React , { use, useContext, useState } from 'react';
 import one from '../image_folder/balancing-1868051_1920.jpg'
 import data_men from './data/mens';
 import { DataContext } from './Contexts/DataContext';
-import { ChevronDown, ChevronUp, Heart, ShoppingCart , Eye, Tag, Filter } from 'react-feather';
+import { ChevronDown, ChevronUp, Heart, ShoppingCart , Eye, Tag, Filter, ArrowDownCircle } from 'react-feather';
 import { Link } from 'react-router-dom';
 
 function Men() {
  
-  const { handleView , shop , handleShop } = useContext(DataContext);
+  const { handleView   , handleLikes, handleFavourites , setHandleFavourites , shop , handleShop } = useContext(DataContext);
   const [handleData , setHandleData] = useState(data_men);
 
 
@@ -94,9 +94,9 @@ function Men() {
       <div className="rounded-xl bg-white w-full p-1 h-[72vh]   sm:h-[74vh] lg:h-[76vh]" key={index}>
         <div className='relative h-[50vh] w-full  md:h-[54vh]'>
         <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
-        <div className='absolute top-2 right-2'>
-          <Heart color='red' size={16} fillRule='' />
-        </div>
+        <button onClick={()=>handleLikes(item.id , item)} className='absolute top-2 right-2'>
+          {handleFavourites[item.id] ? <Heart color='red' size={16} fill='red' /> : <Heart color='red' size={16} />}
+        </button>
         {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
         </div> */}

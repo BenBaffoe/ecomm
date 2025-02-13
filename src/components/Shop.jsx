@@ -30,7 +30,7 @@ function Shop() {
   const removeItem = (index) => {
     setSelectedItems((prev) => prev.filter((_, i) => i !== index));
     // setShop(((prev) => ({ [index]: false })));
-    setTotal(0);
+    setTotal();
   };
 
   // Function to decrease quantity and update price

@@ -13,6 +13,7 @@ import Gagdets from "./components/Gagdets";
 import { DataContext } from "./components/Contexts/DataContext";
 import Shop from "./components/Shop";
 import View from "./components/View";
+import Favourite from "./components/favourite";
 
 function App() {
   const location = useLocation();
@@ -27,7 +28,35 @@ function App() {
   const [shop , setShop] = useState({});
   const [handlesView , setHandlesView] = useState([]);
   const [selectedItems , setSelectedItems] = useState([]);
+  const [handleFavourites , setHandleFavourites] = useState({ });
+  const [likedItems , setLikedItems] = useState([]);
   // const [handleCart , setHandle]
+
+  function handleLikes(index , item){
+       if(!handleFavourites[index]){
+        setHandleFavourites(((prev)=>({...prev ,[index]: true })));
+       }else if(handleFavourites){
+        setHandleFavourites(((prev)=>({...prev ,[index]: !prev[index] })));
+       }
+
+       handleLikesPage(item);
+     
+     console.log(handleFavourites[index] + 'iiiiii')
+  }
+
+  function handleLikesPage(item) {
+    setLikedItems((prev) => {
+      // If item already exists, remove it
+      if (prev.includes(item)) {
+        return prev.filter((i) => i !== item);
+      } 
+      // Otherwise, add it
+      return [...prev, item];
+    });
+  
+    console.log(likedItems + 'hdh');
+  }
+  
 
 
   function handleShop(item){
@@ -48,7 +77,7 @@ function App() {
   return (
     <div className="w-screen  sm:w-screen md:w-screen lg:w-screen xl:w-screen">
 <div className="w-full overflow-hidden">
-<DataContext.Provider value={{handleShop , selectedItems, handlesView, handleView  , shop , setSelectedItems , handleIndex, setHandleIndex}}>
+<DataContext.Provider value={{handleShop , likedItems,  handleLikesPage , setLikedItems , handleFavourites , setHandleFavourites ,  handleLikes , selectedItems, handlesView, handleView  , shop , setSelectedItems , handleIndex, setHandleIndex}}>
 {showNavbar && (
         <div className="navbar  w-full h-12 bg-white fixed top-0 z-20">
           <Navbar />
@@ -64,6 +93,7 @@ function App() {
         <Route path="/gadgets" element={<Gagdets/>}/>
         <Route path="/view" element={<View/>}/>
         <Route path="/shop" element={<Shop/>}/>
+        <Route path='/favs' element={<Favourite/>}/>
   </Routes>
 </DataContext.Provider>     
 </div>

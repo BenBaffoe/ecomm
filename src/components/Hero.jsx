@@ -13,7 +13,7 @@ function Hero() {
 
   const newArrivalsRef = useRef(null); // Ref for New Arrivals section
 
-  const {handleIndex, setHandleIndex,  selectedItems , setSelectedItems , handleShop , shop , handleView} =  useContext(DataContext);
+  const {handleIndex, handleLikes, handleFavourites , setHandleFavourites , setHandleIndex,  selectedItems , setSelectedItems , handleShop , shop , handleView} =  useContext(DataContext);
 
   const scrollToNewArrivals = () => {
     newArrivalsRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -157,9 +157,9 @@ function Hero() {
       <div className="rounded-xl bg-white w-full p-1 h-[72vh]   sm:h-[74vh] lg:h-[76vh]" key={index}>
         <div className='relative h-[50vh] w-full  md:h-[54vh]'>
         <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
-        <div className='absolute top-2 right-2'>
-          <Heart color='red' size={16} fillRule='' />
-        </div>
+        <button onClick={()=>handleLikes(item.id , item)} className='absolute top-2 right-2'>
+          {handleFavourites[item.id] ? <Heart color='red' size={16} fill='red' /> : <Heart color='red' size={16} />}
+        </button>
         {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
         </div> */}

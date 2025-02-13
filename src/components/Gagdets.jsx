@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Gagdets() {
 
-  const { handleView , shop , handleShop } = useContext(DataContext);
+  const { handleView , handleFavourites, handleLikes , setHandleFavourites , shop , handleShop } = useContext(DataContext);
 
   const [handleGadgetsData , setHandleGadgetsData] = useState(gadgets)
 
@@ -83,9 +83,9 @@ function Gagdets() {
       <div className="rounded-xl  bg-white p-1 h-[70vh] md:h-[70vh]" key={index}>
         <div className='relative  h-[48vh] w-full  md:h-[49vh]'>
         <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
-        <div className='absolute top-2 right-2'>
-          <Heart color='black' size={16} />
-        </div>
+        <button onClick={()=>handleLikes(item.id , item)} className='absolute top-2 right-2'>
+          {handleFavourites[item.id] ? <Heart color='red' size={16} fill='red' /> : <Heart color='red' size={16} />}
+        </button>
         {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
         </div> */}

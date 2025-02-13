@@ -5,8 +5,10 @@ import { DataContext } from "./Contexts/DataContext"
 
 function Navbar() {
   const [show, setShow] = useState(false);
-  const { selectedItems, setSelectedItems } = useContext(DataContext);
+  const { selectedItems, setSelectedItems , likedItems } = useContext(DataContext);
   let shopLength = selectedItems.length;
+  let favLength = likedItems.length;
+
 
   return (
     <div className='w-full  lg:fixed top-0 left-0 right-0 overflow-hidden rounded-md shadow-md bg-white'>
@@ -20,7 +22,7 @@ function Navbar() {
       <button className='relative'>
        <ShoppingCart size={21} />
       <div className='absolute -bottom-4 -left-3 bg-rose-400 text-black-dark p-[0.008rem]  w-5 rounded-full'>
-        { shopLength && <div className='text-center '><p className='text-xs font-light text-center '>{shopLength}</p></div> }
+       { shopLength && <div className='text-center '><p className='text-sm font-light text-center '>{shopLength}</p></div> }
       </div>
       </button>
       </Link>
@@ -29,7 +31,7 @@ function Navbar() {
       <button className='relative'>
        <Heart size={21} />
       <div className='absolute -bottom-4 -left-3 bg-rose-400 text-black-dark p-[0.008rem]  w-5 rounded-full'>
-        { shopLength && <div className='text-center '><p className='text-xs font-light text-center '>{shopLength}</p></div> }
+        { favLength && <div className='text-center '><p className='text-sm font-light text-center '>{favLength}</p></div> }
       </div>
       </button>
       </Link>
@@ -57,7 +59,7 @@ function Navbar() {
      <button className='relative'>
       <p><Heart size={16} className='mt-2' /></p>
       <div className='absolute -bottom-3 right-3 bg-rose-400 text-white h-5 w-5 rounded-full'>
-        { shopLength && <div className='text-sm'>{shopLength}</div> }
+        { favLength && <div className='text-sm'>{favLength}</div> }
       </div>
      </button>
      </Link> 

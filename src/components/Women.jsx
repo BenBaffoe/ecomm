@@ -7,7 +7,7 @@ import { ChevronDown, ChevronUp, Heart, ShoppingCart , Eye, Tag } from 'react-fe
 import { Link } from 'react-router-dom';
 
 function Women() {
-  const { handleView , shop , handleShop } = useContext(DataContext);
+  const { handleView , handleLikes , handleFavourites , setHandleFavourites , shop , handleShop } = useContext(DataContext);
 
   const [handleWomenData , setHandleWomenData] = useState(data_women)
 
@@ -68,9 +68,9 @@ function Women() {
       <div className="rounded-xl  bg-white p-1 h-[86vh] md:h-[74vh]" key={index}>
         <div className='relative w-full h-[63vh] md:h-[54vh]'>
         <img src={item.image} className="w-full h-full object-cover rounded-md" alt={`Image ${index}`} />
-        <div className='absolute top-2 right-2'>
-          <Heart color='red' size={16} />
-        </div>
+        <button onClick={()=>handleLikes(item.id , item)} className='absolute top-2 right-2'>
+          {handleFavourites[item.id] ? <Heart color='red' size={16} fill='red' /> : <Heart color='red' size={16} />}
+        </button>
         {/* <div className='absolute top-2 left-2'>
           <Tag size={16} className='text-red-600'/>
         </div> */}
