@@ -120,7 +120,8 @@ const removeItem = (index) => {
       title: "Amount Paid!",
       text: "Payment successful!",
     }).then(
-        setSelectedItems([])
+        setSelectedItems([]),
+        setTotal(0)
     )
 
   
@@ -137,17 +138,17 @@ const removeItem = (index) => {
 
   return (
     <div className="w-screen block mt-10 md:mt-0 md:flex  overflow-x-scroll  h-screen p-6">
-      <div className="block w-full h-fit mt-4 md:w-8/12 md:space-x-0 p-6 shadow-md md:shadow-none rounded-md">
+      <div className="block w-full pr-10 md:pl-0 h-fit mt-4 md:w-8/12 md:space-x-0 p-6 shadow-md md:shadow-none rounded-md">
         {/* Header Row */}
         <div className="flex w-full justify-between font-semibold text-gray-700 border-b pb-3">
           <div className="w-5/12   md:w-4/12">Product</div>
-          <div className="w-3/12 md:w-4/12 text-center">Quantity</div>
+          <div className="w-2/12 md:w-4/12 text-center">Quantity</div>
           <div className="hidden md:flex   md:w-2/12 text-center">Total</div>
-          <div className="hidden md:flex  md:w-2/12 pl-6  text-center">Actions</div>
+          <div className="w-2/12 md:flex  md:w-2/12 pl-6  text-center">Actions</div>
         </div>
 
         {/* Cart Items */}
-        <div className="mt-6 md:mt-0 w-full">
+        <div className="mt-6 md:mt-0 w-full ">
           {selectedItems.length > 0 ? (
             selectedItems.map((item, index) => (
               <div
@@ -155,17 +156,17 @@ const removeItem = (index) => {
                 className="flex items-center justify-between py-4 border-b"
               >
                 {/* Product Image & Name */}
-                <div className="w-4/12 flex items-center">
+                <div className="w-4/12  flex items-center">
                   <img
                     src={item.image}
                     alt="Product"
                     className="w-16 h-16 object-cover rounded"
                   />
-                  <span className="ml-4 text-gray-700">{item.descript}</span>
+                  <span className="ml-4 text-xs  text-gray-700">{item.descript}</span>
                 </div>
 
                 {/* Quantity (For now, it's static) */}
-                <div className="w-3/12 flex justify-evenly text-center">
+                <div className="w-3/12 flex ml-10 mr-0 md:mr-0 md:ml-0 justify-evenly text-center">
                 <button onClick={()=>handleValueChange(item.id , item.price)} className="rounded-full shadow-sm bg-black-newdark cursor-pointer h-fit w-fit"><ChevronUp color="white" size={18} /></button>
                 <div>{handleQuantity[item.id] || 0}</div>
                 <button onClick={()=>handleValueReduction(item.id , item.price)} className="rounded-full shadow-sm bg-black-newdark  h-fit w-fit"><ChevronDown color="white" size={18}/></button>
@@ -177,14 +178,14 @@ const removeItem = (index) => {
                 </div>
 
                 {/* Remove Button */}
-                <div className="hidden md:w-2/12 md:block text-center">
-                  <button
-                    onClick={() => removeItem(index , item.price)}
-                    className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
-                  >
-                    Remove
-                  </button>
-                </div>
+                <div className="w-2/12 md:flex justify-center">
+                <button
+                onClick={() => removeItem(index)}
+                className="bg-red-500 w-12/12 text-xs md:text-sm text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
+                 >
+                  Remove
+                 </button>
+              </div>
               </div>
             ))
           ) : (
