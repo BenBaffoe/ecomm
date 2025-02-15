@@ -7,7 +7,7 @@ function Favourite() {
   const {likedItems} = useContext(DataContext);
 
   return (
-    <div className='w-full h-full overflow-x-scroll md:h-screen  p-6 mt-4'>
+    <div className='w-full h-full flex items-center justify-center overflow-x-scroll md:h-screen  p-6 mt-4'>
       <div className='w-10/12'>
       <div className='text-3xl font-semibold text-left pb-20 md:pb-8 '>Favourites</div>
         {likedItems.map((item , index)=>(
@@ -25,7 +25,7 @@ function Favourite() {
               </div>
 
               <div className='mt-2 font-bold flex justify-between'>
-                <div>{item.price}</div>
+                <div>{'Ghs ' + item.price}</div>
                 <div><CheckCircle size={16} color='green'/></div>
               </div>
             </div>

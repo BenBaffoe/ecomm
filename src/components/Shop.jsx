@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
 import { DataContext } from "./Contexts/DataContext";
 import { ChevronDown, ChevronUp } from "react-feather";
+import Swal from 'sweetalert2';
+
+
 
 function Shop() {
   const { selectedItems, setSelectedItems , shop , setShop } = useContext(DataContext);
@@ -27,11 +30,36 @@ function Shop() {
     });
   }
 
-  const removeItem = (index) => {
-    setSelectedItems((prev) => prev.filter((_, i) => i !== index));
-    // setShop(((prev) => ({ [index]: false })));
-    setTotal();
-  };
+const removeItem = (index) => {
+  setSelectedItems((prev) => {
+    const itemToRemove = prev[index]; // Get item before removing
+    const updatedItems = prev.filter((_, i) => i !== index); // Remove item
+
+    if (itemToRemove) {
+      const itemPrice = price[itemToRemove.id] || 0; // Get price of removed item
+      setTotal((prevTotal) => prevTotal - itemPrice); // Deduct from total
+    }
+
+    return updatedItems;
+  });
+
+  // Also remove the item from the `price` state
+  setPrice((prev) => {
+    const updatedPrice = { ...prev };
+    delete updatedPrice[selectedItems[index]?.id]; // Remove the price of the removed item
+    return updatedPrice;
+  });
+
+  // Also remove from quantity state
+  setHandleQuantity((prev) => {
+    const updatedQuantity = { ...prev };
+    delete updatedQuantity[selectedItems[index]?.id]; // Remove quantity of removed item
+    return updatedQuantity;
+  });
+
+  console.log("Item removed, updated total:", total);
+};
+
 
   // Function to decrease quantity and update price
   function handleValueReduction(value, prices) {
@@ -62,6 +90,43 @@ function Shop() {
     setTotal(totalAmount);
   }
 
+
+  function handlePayment() {
+    // Check if any item has a quantity greater than 0
+    const hasQuantity = Object.values(handleQuantity).some((qty) => qty > 0);
+  
+    if (!hasQuantity) {
+      Swal.fire({
+        icon: "warning",
+        title: "Include Quantity!",
+        text: "Please specify the quantity of the selected items before proceeding!",
+      });
+      return; // Stop the function if no quantity is specified
+    }
+  
+    // Reset all shop items to false
+    setShop((prev) => {
+      const resetShop = { ...prev };
+      Object.keys(resetShop).forEach((key) => {
+        resetShop[key] = false;
+      });
+      return resetShop;
+    });
+    
+
+    // Show success message
+    Swal.fire({
+      icon: "success",
+      title: "Amount Paid!",
+      text: "Payment successful!",
+    }).then(
+        setSelectedItems([])
+    )
+
+  
+  }
+  
+  
 
 
 
@@ -114,7 +179,7 @@ function Shop() {
                 {/* Remove Button */}
                 <div className="hidden md:w-2/12 md:block text-center">
                   <button
-                    onClick={() => removeItem(index)}
+                    onClick={() => removeItem(index , item.price)}
                     className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
                   >
                     Remove
@@ -146,7 +211,7 @@ function Shop() {
 
      <div className="pt-10 md:mt-72">
       <div className="flex items-center justify-center w-full">
-        <button className="text-sm font-semibold text-white bg-black-neutral hover:bg-black-dark w-full h-12 shadow-md rounded-2xl ">Pay Amount</button>
+        <button  onClick={handlePayment} className="text-sm font-semibold text-white bg-black-neutral hover:bg-black-dark w-full h-12 shadow-md rounded-2xl ">Pay Amount</button>
       </div>
      </div>
       </div>

@@ -77,7 +77,7 @@ function App() {
   return (
     <div className="w-screen  sm:w-screen md:w-screen lg:w-screen xl:w-screen">
 <div className="w-full overflow-hidden">
-<DataContext.Provider value={{handleShop , likedItems,  handleLikesPage , setLikedItems , handleFavourites , setHandleFavourites ,  handleLikes , selectedItems, handlesView, handleView  , shop , setSelectedItems , handleIndex, setHandleIndex}}>
+<DataContext.Provider value={{handleShop , likedItems, setShop ,  handleLikesPage , setLikedItems , handleFavourites , setHandleFavourites ,  handleLikes , selectedItems, handlesView, handleView  , shop , setSelectedItems , handleIndex, setHandleIndex}}>
 {showNavbar && (
         <div className="navbar  w-full h-12 bg-white fixed top-0 z-20">
           <Navbar />
